@@ -23,7 +23,7 @@ def ListMobil() :
     global t1
     for index in range(len(list_mobil)):
         car = list_mobil[index]
-        t1.add_row([index] + car)  # Tambahkan nomor index ke depan data mobil
+        t1.add_row([index] + car)  
     
     print(t1)
 
@@ -36,7 +36,7 @@ def ListMobil_Wilayah(wilayah) :
         car = list_mobil[index]
         if car[5] == wilayah :
              t1.add_row([index] + car)
-    if t1.rowcount > 0 : # u/ cek apakah ada mobil yang tersedia di wilayah tsb, jika baris > 0 maka mobil di wilayah tsb ada
+    if t1.rowcount > 0 : 
         print(f'List Mobil di {wilayah}')
         print(t1)
     else :
@@ -128,7 +128,7 @@ while True :
         tambah_mobil()
 
         print(f'Mobil berhasil ditambahkan!\nBerikut adalah List Mobil Terbaru')
-        ListMobil() #u/ nampilin seluruh daftar mobil termasuk yang baru ditambahkan
+        ListMobil() 
         
 
     elif menu == 3 :
@@ -184,7 +184,7 @@ while True :
             if jumlah_uang > total_harga :
                 kembalian = jumlah_uang - total_harga
                 print(f'Terima Kasih!\nUang kembalian anda adalah {kembalian}')
-            # u/ hapus mobil yang sudah dipesan
+            
                 for i in cart :
                     list_mobil[i[0]][7] = 'Not Available'
                 break
